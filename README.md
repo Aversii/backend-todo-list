@@ -4,6 +4,9 @@ Bem-vindo à **To-Do List API**! Esta API backend foi desenvolvida com o framewo
 
 ---
 
+## 🚀 Deploy:
+ - https://backend-todo-list-eight.vercel.app
+
 ## 📋 Funcionalidades
 
 - 👤 **Gerenciamento de Usuários**
@@ -21,8 +24,6 @@ Bem-vindo à **To-Do List API**! Esta API backend foi desenvolvida com o framewo
   - Excluir tarefas
 
 ---
-
-## 🚀 Como começar
 
 ### 🛠️ Pré-requisitos
 
