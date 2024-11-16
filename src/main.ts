@@ -5,7 +5,7 @@ import { User } from './model/user';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-    origin: 'https://backend-todo-list-eight.vercel.app/',
+    origin: 'https://y-iota-opal.vercel.app/',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
   });  await app.listen(process.env.PORT ?? 3000);
