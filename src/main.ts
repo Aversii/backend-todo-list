@@ -5,9 +5,9 @@ import { User } from './model/user';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-    origin: 'https://y-iota-opal.vercel.app/',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true,
+    origin: '*', // Permite todas as origens
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'], // Certifique-se de permitir cabeçalhos necessários  
   });  await app.listen(process.env.PORT ?? 3000);
   
   }
