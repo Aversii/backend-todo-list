@@ -5,6 +5,7 @@ import { User } from './model/user';
 import { Task } from './model/tasks';
 import { UserModule } from './user.module';
 import { TaskModule } from './task.module';
+import { Request, Response } from 'express'; // Importando os tipos do express
 
 @Module({
   imports: [
@@ -27,7 +28,7 @@ import { TaskModule } from './task.module';
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
-    consumer.apply((req, res, next) => {
+    consumer.apply((req: Request, res: Response, next) => {
       res.setHeader('Access-Control-Allow-Origin', '*'); // Permitir todas as origens (use com cautela)
       res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
       res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
