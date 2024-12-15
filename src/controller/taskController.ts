@@ -13,7 +13,7 @@ export class TaskController {
   ) {}
 
   private getUserIdFromAuthToken(authHeader: string): string {
-    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    if (!authHeader) {
       throw new HttpException('Token not provided', HttpStatus.UNAUTHORIZED);
     }
 
@@ -35,20 +35,20 @@ export class TaskController {
       if (error instanceof CustomError) {
         throw new HttpException(error.message, error.statusCode);
       }
-      throw new HttpException('Internal Server Error', HttpStatus.INTERNAL_SERVER_ERROR);
+      throw new HttpException(`Internal Server Error: ${error.message}`, HttpStatus.INTERNAL_SERVER_ERROR);
     }
   }
 
   @Get()
   async getAllTasks(@Headers('Authorization') authHeader: string): Promise<TaskDTO[]> {
     try {
-      const userId = this.getUserIdFromAuthToken(authHeader);
+      const userId = this.getUserIdFromAuthToken(authHeader) as string;
       return await this.taskService.findAll(userId);
     } catch (error) {
       if (error instanceof CustomError) {
         throw new HttpException(error.message, error.statusCode);
       }
-      throw new HttpException('Internal Server Error', HttpStatus.INTERNAL_SERVER_ERROR);
+      throw new HttpException(`Internal Server Error: ${error.message}`, HttpStatus.INTERNAL_SERVER_ERROR);
     }
   }
 
@@ -61,7 +61,7 @@ export class TaskController {
       if (error instanceof CustomError) {
         throw new HttpException(error.message, error.statusCode);
       }
-      throw new HttpException('Internal Server Error', HttpStatus.INTERNAL_SERVER_ERROR);
+      throw new HttpException(`Internal Server Error: ${error.message}`, HttpStatus.INTERNAL_SERVER_ERROR);
     }
   }
 
@@ -78,7 +78,7 @@ export class TaskController {
       if (error instanceof CustomError) {
         throw new HttpException(error.message, error.statusCode);
       }
-      throw new HttpException('Internal Server Error', HttpStatus.INTERNAL_SERVER_ERROR);
+      throw new HttpException(`Internal Server Error: ${error.message}`, HttpStatus.INTERNAL_SERVER_ERROR);
     }
   }
 
@@ -91,7 +91,7 @@ export class TaskController {
       if (error instanceof CustomError) {
         throw new HttpException(error.message, error.statusCode);
       }
-      throw new HttpException('Internal Server Error', HttpStatus.INTERNAL_SERVER_ERROR);
+      throw new HttpException(`Internal Server Error: ${error.message}`, HttpStatus.INTERNAL_SERVER_ERROR);
     }
   }
 }
