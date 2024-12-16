@@ -1,15 +1,14 @@
 {
-    "type": "oracle",
-    "host": "oracle.fiap.com.br",
-    "port": 1521,
-    "sid": "orcl",
-    "username": "rm555667",
-    "password": "260493",
-    "connectString": "(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=oracle.fiap.com.br)(PORT=1521)))(CONNECT_DATA=(SID=orcl)))",
-    "entities": [
-      "src/entity/**/*.ts"
-    ],
-    "synchronize": true,
-    "logging": true
-  }
-  
+  "type": "oracle",
+  "host": "oracle.fiap.com.br",
+  "port": 1521,
+  "sid": "orcl",
+  "username": "rm555667",
+  "password": "260493",
+  "connectString": "(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=oracle.fiap.com.br)(PORT=1521)))(CONNECT_DATA=(SID=orcl)))",
+  "entities": [
+    "src/entity/**/*.ts"
+  ],
+  "synchronize": true,
+  "logging": true
+}

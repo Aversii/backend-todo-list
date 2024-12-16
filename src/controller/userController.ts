@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Body, Param, Put, Delete, HttpException, HttpStatus } from '@nestjs/common';
-import { UserService } from 'src/service/userService/user.service';
-import { CustomError } from 'src/error/customError';
-import { LoginDto, User } from 'src/model/user';
+import { UserService } from '../service/userService/user.service';
+import { CustomError } from '../error/customError';
+import { LoginDto, User } from '../model/user';
 import { CreateUserDto, GetUserDto } from '../dto/userDto';
 
 @Controller('users')

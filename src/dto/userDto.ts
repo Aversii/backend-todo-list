@@ -1,4 +1,4 @@
-import { User } from 'src/model/user'; 
+import { User } from '../model/user'; 
 
 export class CreateUserDto {
   firstName: string;

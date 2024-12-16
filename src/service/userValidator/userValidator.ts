@@ -1,4 +1,4 @@
-import { CustomError } from 'src/error/customError';
+import { CustomError } from '../../error/customError';
 
 export class UserValidator {
   static validateSignup(data: {firstName: string;lastName: string;email: string; password: string; }): void {

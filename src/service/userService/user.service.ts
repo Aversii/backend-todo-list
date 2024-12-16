@@ -2,13 +2,13 @@
 updating, and deleting users, as well as validating user credentials and generating JWT tokens. */
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { User } from 'src/model/user';
+import { User } from '../../model/user';
 import { Repository } from 'typeorm';
 import * as bcrypt from 'bcrypt';
 import { JwtService } from '@nestjs/jwt';
-import { UserAlreadyExistsError, UserNotFoundError, NoUsersFoundError, TokenGenerationError, InvalidCredentialsError } from 'src/error/customError';
+import { UserAlreadyExistsError, UserNotFoundError, NoUsersFoundError, TokenGenerationError, InvalidCredentialsError } from '../../error/customError';
 import { UserValidator } from '../userValidator/userValidator';
-import { CreateUserDto, GetUserDto, UpdateUserDto } from 'src/dto/userDto';
+import { CreateUserDto, GetUserDto, UpdateUserDto } from '../../dto/userDto';
 
 @Injectable()
 export class UserService {

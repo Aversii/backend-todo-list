@@ -1,8 +1,8 @@
 import { Controller, Get, Post, Body, Param, Put, Delete, HttpException, HttpStatus, Headers } from '@nestjs/common';
-import { TaskService } from 'src/service/taskService/task.service';
+import { TaskService } from '../service/taskService/task.service';
 import { JwtService } from '@nestjs/jwt';
-import { CustomError } from 'src/error/customError';
-import { Task } from 'src/model/tasks';
+import { CustomError } from '../error/customError';
+import { Task } from '../model/tasks';
 import { TaskDTO } from '../dto/taskDto';
 
 @Controller('tasks')

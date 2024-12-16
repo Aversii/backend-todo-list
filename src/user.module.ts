@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { UserController } from 'src/controller/userController';
+import { UserController } from './controller/userController'; // Caminho relativo correto
 import { JwtModule } from '@nestjs/jwt';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { User } from 'src/model/user';
+import { User } from './model/user';
 import { AuthService } from './service/authService/auth.service';
 import { UserService } from './service/userService/user.service';
 

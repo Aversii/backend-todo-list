@@ -1,4 +1,4 @@
-import { Task } from "src/model/tasks";
+import { Task } from "../model/tasks";
 
 export class TaskDTO {
     id: string;

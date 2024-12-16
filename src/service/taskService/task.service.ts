@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Task } from 'src/model/tasks';
-import { User } from 'src/model/user';
-import { NoTasksFoundError, TaskNotFoundError } from 'src/error/customError';
-import { TaskDTO } from 'src/dto/taskDto';
+import { Task } from '../../model/tasks';
+import { User } from '../../model/user';
+import { NoTasksFoundError, TaskNotFoundError } from '../../error/customError';
+import { TaskDTO } from '../../dto/taskDto';
 import { TaskValidator } from '../taskValidator/taskValidator';
 
 @Injectable()

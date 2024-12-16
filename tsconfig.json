@@ -1,21 +1,29 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "declaration": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "ES2021",
-    "sourceMap": true,
-    "outDir": "./dist",
-    "baseUrl": "./",
-    "incremental": true,
-    "skipLibCheck": true,
-    "strictNullChecks": false,
-    "noImplicitAny": false,
-    "strictBindCallApply": false,
-    "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
-  }
+    "module": "CommonJS",                       // Usar módulos CommonJS para compatibilidade com Node.js
+    "target": "ESNext",                         // Alvo de compilação para a versão mais recente do JavaScript
+    "lib": ["esnext"],                          // Utiliza as bibliotecas mais recentes do ECMAScript
+    "moduleResolution": "node",                 // Resolução de módulos semelhante ao Node.js
+    "declaration": true,                        // Gerar arquivos de declaração para TypeScript
+    "removeComments": true,                     // Remove comentários no código compilado
+    "emitDecoratorMetadata": true,              // Necessário para usar decorators
+    "experimentalDecorators": true,             // Habilita o uso de decorators
+    "allowSyntheticDefaultImports": true,       // Permite importação de módulos como se fossem default
+    "sourceMap": true,                          // Gerar arquivos .map para depuração
+    "outDir": "./dist",                         // Diretório de saída dos arquivos compilados
+    "baseUrl": "./",                            // Base para resolver módulos
+    "incremental": true,                        // Habilita compilação incremental
+    "skipLibCheck": true,                       // Ignora checagem de tipos em arquivos de bibliotecas
+    "strictNullChecks": false,                  // Não exige checagem de valores nulos
+    "noImplicitAny": false,                     // Não gera erro para variáveis de tipo implícito any
+    "strictBindCallApply": false,               // Não verifica regras estritas para bind, call e apply
+    "forceConsistentCasingInFileNames": false,  // Não exige consistência de maiúsculas/minúsculas em nomes de arquivos
+    "noFallthroughCasesInSwitch": false         // Permite o uso de 'fallthrough' em switch
+  },
+  "include": [
+    "src/**/*"                                  // Incluir todos os arquivos dentro da pasta 'src'
+  ],
+  "exclude": [
+    "node_modules"                              // Excluir 'node_modules' da compilação
+  ]
 }
